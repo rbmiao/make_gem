@@ -1,6 +1,6 @@
 # RubyGems
 
-## These steps are following tutorial:
+## These steps are following this tutorial:
 ```
 https://guides.rubygems.org/make-your-own-gem/
 ```

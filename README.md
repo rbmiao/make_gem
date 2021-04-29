@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 end
 ```
-## Then build a gem by running:
+## Then build my gem by running:
 ```
 rongbing$ gem build hola_dan.gemspec
   Successfully built RubyGem
@@ -77,7 +77,7 @@ Hello Daniel Miao
 
 ```
 
-## Share it on RubyGem web: fasten is my username
+## Share it on RubyGem web: fasten is my RubyGem's username
 ``` 
 rongbing$ curl -u fasten https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; chmod 0600 ~/.gem/credentials
 Enter host password for user 'fasten':
@@ -95,7 +95,7 @@ Successfully registered gem: hola_dan (0.0.0)
 ```
 
 
-## Check whether it is available
+## Check whether it is available publicly
 ```
 $ gem list -r hola_dan
 
@@ -142,7 +142,7 @@ class Hola_dan::Translator
 end
 ```
 
-Or move some with an extra ruby file:
+Or move some codes to an extra ruby file:
 ```
 % tree
 .
@@ -171,7 +171,7 @@ class Hola_dan::Translator
 end
 ```
 
-And hola_dan.rb changes to 
+And hola_dan.rb should change accordingly 
 ```
 class Hola_dan
   def self.hi(language = "english")
@@ -184,14 +184,14 @@ end
 require 'hola_dan/translator'
 ```
 
-Accordingly, hola_dan.gemspec changes to:
+Accordingly, hola_dan.gemspec needs to add new file:
 ```
 ...
   s.files       = ["lib/hola_dan.rb", "lib/hola_dan/translator.rb"]
 ...
 ```
 
-Try new gem in local, providing lib directory in case no $LOAD_PATH not setting up
+Try new gem in local, providing lib directory in case no $LOAD_PATH setting up
 ```
 $ irb -Ilib -rhola_dan
 2.7.2 :001 >
@@ -275,7 +275,7 @@ Pushing gem to https://rubygems.org...
 Successfully registered gem: hola_dan (0.0.1)
 ```
 
-Test them:
+Test them, first test uses default argument(english):
 ```
 Rongbings-MacBook-Pro:hola rongbing$ ruby -Ilib ./bin/hola_dan
 Hello Daniel Miao

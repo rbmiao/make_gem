@@ -29,7 +29,6 @@ Add following to hola_dan.gemspec
 Gem::Specification.new do |s|
   s.name        = 'hola_dan'
   s.version     = '0.0.0'
-  s.executables << 'hola_dan'
   s.summary     = "Hola! Daniel"
   s.description = "A simple hello world gem"
   s.authors     = ["Daniel Miao"]
